@@ -1,2 +1,2 @@
-# BMS-Table-Template
-BMS難易度表のテンプレートです。
+# Guanacoite難易度表
+自作差分
