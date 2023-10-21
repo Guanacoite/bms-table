@@ -27,10 +27,9 @@
     <div class="container">
 
         <div class="alert alert-success mb-3" role="alert">
-            <p>自作差分のみ。次期難易度表フォーマット対応。</p>
-            <p>難易度表の読み込みと表示に数秒かかります。</p>
+            <p>なにかあれば@danopremiumまで</p>
             <hr>
-            <p class="mb-0">説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文説明文</p>
+            <p class="mb-0">recommendの★は多ければ多いほどオススメです。</p>
         </div>
 
 
@@ -55,13 +54,13 @@
                 var obj = $("#table_int");
 
                 obj.html("");
-                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>Recommend</th><th>Comment</th></tr></thead><tbody>")
+                $("<thead class='table-dark'><tr><th>Level</th><th>Title</th><th>Artist</th><th>Chart</th><th>Recommend</th><th>Comment</th></tr></thead><tbody>")
                     .appendTo(obj);
                 var obj_sep = null;
                 for (var i = 0; i < info.length; i++) {
                     if (x != info[i].level) {
                         if (obj_sep != null) {
-                            obj_sep.html("<td colspan='5'>" + "<b>" + mark + x + " (" + count +
+                            obj_sep.html("<td colspan='6'>" + "<b>" + mark + x + " (" + count +
                                 "譜面)</b></td>");
                         }
                         obj_sep = $("<tr class='table-dark' style='text-align:center' id='" + mark + info[i].level +
@@ -83,8 +82,11 @@
                         .md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
 
                     // Artist
-                    $("<td width='30%'>" + info[i].artist + "</td>").appendTo(str);
+                    $("<td width='25%'>" + info[i].artist + "</td>").appendTo(str);
 
+                    // Chart
+                    $("<td width='10%'>" + info[i].chart + "</td>").appendTo(str);
+                    
                     // Recommend
                     $("<td width='10%'>" + info[i].recommend + "</td>").appendTo(str);
                     
@@ -97,7 +99,7 @@
                 $("</tbody>").appendTo(obj);
 
                 if (obj_sep != null) {
-                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='5'>" + "<b>" + mark + x +
+                    obj_sep.html("<td class='table-dark' style='text-align:center' colspan='6'>" + "<b>" + mark + x +
                         " (" + count + "譜面)</b></td>");
                 }
             }
