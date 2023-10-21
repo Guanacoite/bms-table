@@ -27,9 +27,9 @@
     <div class="container">
 
         <div class="alert alert-success mb-3" role="alert">
-            <p>なにかあれば@danopremiumまで</p>
+            <p>大体地力譜面 なにかあれば@danopremiumまで</p>
             <hr>
-            <p class="mb-0">recommendの★は多ければ多いほどオススメです。</p>
+            <p class="mb-0">recommendの★は多ければ多いほどオススメです</p>
         </div>
 
 
@@ -85,7 +85,8 @@
                     $("<td width='25%'>" + info[i].artist + "</td>").appendTo(str);
 
                     // Chart
-                    $("<td width='10%'>" + info[i].chart + "</td>").appendTo(str);
+                    $("<td width='5%'>" +
+                        "<a href='"info[i].chart + "' target='_blank'>" + "DL" + "</a></td>").appendTo(str);
                     
                     // Recommend
                     $("<td width='10%'>" + info[i].recommend + "</td>").appendTo(str);
